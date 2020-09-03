@@ -6,12 +6,9 @@ class Witch {
 		$b = 0;	
 		$total = 0;		
 		while($b <= $sequence_of_year){
-			if($b == 0){
-				$fibonaci_numbers[]=0;
-				$total = 0;
-			}else if($b == 1){
-				$fibonaci_numbers[]=1;
-				$total += 1;
+			if($b <= 1){
+				$fibonaci_numbers[]=$b;
+				$total += $b;
 			}else{
 				$total_fibonaci_numbers = $fibonaci_numbers[count($fibonaci_numbers)-1] + $fibonaci_numbers[count($fibonaci_numbers)-2];
 				$fibonaci_numbers[] = $total_fibonaci_numbers;
@@ -32,20 +29,21 @@ class Witch {
 		}		
 		return $total / count ($averageNumberOfPeople);			
 	}
+
 }
 
 $witch = new Witch();
 
 //echo $witch->killVillarge(5);
 echo $witch->averageNumberOfPeople(Array(
-            Array(
-				  "AgeofDeath"=>10,
-				  "YearofDeath"=>12
-			),
-			Array(
-				  "AgeofDeath"=>13,
-				  "YearofDeath"=>17
-			)
+    Array(
+		"AgeofDeath" => 10,
+		"YearofDeath" => 12
+	),
+	Array(
+		"AgeofDeath" => 13,
+		"YearofDeath" => 17
+	)
 ));
 
 ?>
