@@ -15,7 +15,7 @@ class Witch {
 		return $total_villagers;
 	}
 
-	function averageNumberOfPeople($averageNumberOfPeople=Array()){
+	function averageNumberOfPeople($averageNumberOfPeople = Array()){
 		$total_people_killed = 0;
 		foreach ($averageNumberOfPeople as $k => $v) {
 			if($v["YearOfDeath"] < 0 || $v["AgeOfDeath"] < 0)
