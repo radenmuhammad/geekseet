@@ -1,8 +1,7 @@
 <?php 
 class Witch {
 
-	function killVillarge($sequence_of_year=0){
-		$fibonaci_numbers = Array();		
+	function killVillarge($sequence_of_year = 0){
 		$total_villagers = 0;		
 		for ($a = 0;$a <= $sequence_of_year; $a++){
 			if($a < 2){
