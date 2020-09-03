@@ -10,8 +10,8 @@ class Witch {
 				$fibonaci_numbers[] = $a;
 				$total_villagers += $a;
 			}else{
-				$fibonaci_numbers[] = $fibonaci_numbers[count($fibonaci_numbers)-1] + $fibonaci_numbers[count($fibonaci_numbers)-2];
-				$total_villagers += $fibonaci_numbers[count($fibonaci_numbers)-1];
+				$fibonaci_numbers[] = end($fibonaci_numbers) + $fibonaci_numbers[count($fibonaci_numbers)-2];
+				$total_villagers += end($fibonaci_numbers);
 			}
 			$a ++;
 		}
