@@ -4,19 +4,20 @@ class Witch {
 	function killVillarge($sequence_of_year=0){
 		$fibonaci_numbers = Array();
 		$b = 0;	
+		$total = 0;		
 		while($b <= $sequence_of_year){
 			if($b == 0){
 				$fibonaci_numbers[]=0;
+				$total = 0;
 			}else if($b == 1){
 				$fibonaci_numbers[]=1;
+				$total += 1;
 			}else{
-				$fibonaci_numbers[] = $fibonaci_numbers[count($fibonaci_numbers)-1] + $fibonaci_numbers[count($fibonaci_numbers)-2];
+				$total_fibonaci_numbers = $fibonaci_numbers[count($fibonaci_numbers)-1] + $fibonaci_numbers[count($fibonaci_numbers)-2];
+				$fibonaci_numbers[] = $total_fibonaci_numbers;
+				$total += $total_fibonaci_numbers;
 			}
 			$b++;
-		}
-		$total = 0;
-		foreach ($fibonaci_numbers as $key => $value) {
-			$total += $value;
 		}
 		return $total;
 	}
