@@ -28,11 +28,11 @@ class Witch {
 }
 
 $witch = new Witch();
-//echo "On the 1st year she kills ".$witch->killVillarge(1)." villager<br>";
-//echo "On the 2nd year she kills ".$witch->killVillarge(2)." villager<br>";
-//echo "On the 3rd year she kills ".$witch->killVillarge(3)." villager<br>";
-//echo "On the 4th year she kills ".$witch->killVillarge(4)." villager<br>";
-echo "On the 5th year she kills ".$witch->killVillarge(5)." villager<br>";
+//echo "On the 1st year she kills ".$witch->killVillarge(1)." villagers<br>";
+//echo "On the 2nd year she kills ".$witch->killVillarge(2)." villagers<br>";
+//echo "On the 3rd year she kills ".$witch->killVillarge(3)." villagers<br>";
+//echo "On the 4th year she kills ".$witch->killVillarge(4)." villagers<br>";
+echo "On the 5th year she kills ".$witch->killVillarge(5)." villagers<br>";
 //echo "On the 6th year she kills ".$witch->killVillarge(6)." villager<br>";
 echo "Average Number Of People From Age Of Death = 10, Year Of Death = 12 And Age Of Death = 13, Year Of Death = 17 is ".
 $witch->averageNumberOfPeople(Array(
