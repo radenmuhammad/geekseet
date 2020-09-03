@@ -18,9 +18,8 @@ class Witch {
 	function averageNumberOfPeople($averageNumberOfPeople=Array()){
 		$total_people_killed = 0;
 		foreach ($averageNumberOfPeople as $k => $v) {
-			if($v["YearOfDeath"] < 0 || $v["AgeOfDeath"] < 0){
+			if($v["YearOfDeath"] < 0 || $v["AgeOfDeath"] < 0)
 				return -1;
-			}
 			$total_people_killed += $this->killVillarge($v["YearOfDeath"] - $v["AgeOfDeath"]);
 		}		
 		return $total_people_killed / count ($averageNumberOfPeople);			
@@ -47,4 +46,3 @@ $witch->averageNumberOfPeople(Array(
 ))."<br>";
 
 ?>
-
