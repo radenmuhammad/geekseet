@@ -22,34 +22,20 @@ class Witch {
 		return $total;
 	}
 
-
-	function averageNumberOfPeople($AgeofDeath=0,$YearofDeath=0,$AgeofDeath2=0,$YearofDeath2=0){
+	function averageNumberOfPeople($averageNumberOfPeople=Array()){
 		$total = 0;
-		if(is_array($AgeofDeath)){
-			foreach ($AgeofDeath as $key => $value) {
-				if($value["YearofDeath"] < 0 || $value["AgeofDeath"] < 0){
-					return -1;
-				}
-				$total += $this->killVillarge($value["YearofDeath"] - $value["AgeofDeath"]);
-			}		
-			return $total / count ($AgeofDeath);			
-		}else if(is_int($AgeofDeath)){
-			if($YearofDeath < 0 || $AgeofDeath < 0){
+		foreach ($averageNumberOfPeople as $key => $value) {
+			if($value["YearofDeath"] < 0 || $value["AgeofDeath"] < 0){
 				return -1;
 			}
-			if($YearofDeath2 < 0 || $AgeofDeath2 < 0){
-				return -1;
-			}			
-			$total += $this->killVillarge($YearofDeath - $AgeofDeath);
-			$total += $this->killVillarge($YearofDeath2 - $AgeofDeath2);	
-			return $total / 2;		
-		}	
+			$total += $this->killVillarge($value["YearofDeath"] - $value["AgeofDeath"]);
+		}		
+		return $total / count ($averageNumberOfPeople);			
 	}
 }
 
 $witch = new Witch();
 
-//echo $witch->averageNumberOfPeople(10,12,13,17);
 //echo $witch->killVillarge(5);
 echo $witch->averageNumberOfPeople(Array(
             Array(
