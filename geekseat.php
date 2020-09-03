@@ -34,7 +34,7 @@ class Witch {
 $witch = new Witch();
 
 echo "On the 5th year she kills 5 = ".$witch->killVillarge(5)."<br>";
-echo "Average Number Of People = ".$witch->averageNumberOfPeople(Array(
+echo "Average Number Of People From Age Of Death = 10, Year Of Death = 12 And Age Of Death = 13, Year Of Death = 17 is ".$witch->averageNumberOfPeople(Array(
     Array(
 		"AgeOfDeath" => 10,
 		"YearOfDeath" => 12
