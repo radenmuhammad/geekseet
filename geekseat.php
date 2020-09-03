@@ -3,17 +3,17 @@ class Witch {
 
 	function killVillarge($sequence_of_year=0){
 		$fibonaci_numbers = Array();
-		$b = 0;	
+		$a = 0;	
 		$total = 0;		
-		while($b <= $sequence_of_year){
-			if($b <= 1){
-				$fibonaci_numbers[]=$b;
-				$total += $b;
+		while($a <= $sequence_of_year){
+			if($a <= 1){
+				$fibonaci_numbers[] = $a;
+				$total += $a;
 			}else{
 				$fibonaci_numbers[] = $fibonaci_numbers[count($fibonaci_numbers)-1] + $fibonaci_numbers[count($fibonaci_numbers)-2];
 				$total += $fibonaci_numbers[count($fibonaci_numbers)-1];
 			}
-			$b++;
+			$a++;
 		}
 		return $total;
 	}
