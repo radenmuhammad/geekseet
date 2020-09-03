@@ -4,7 +4,7 @@ class Witch {
 	function killVillarge($sequence_of_year=0){
 		$fibonaci_numbers = Array();
 		$b = 0;	
-		while($b<=$sequence_of_year){
+		while($b <= $sequence_of_year){
 			if($b == 0){
 				$fibonaci_numbers[]=0;
 			}else if($b == 1){
