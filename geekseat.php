@@ -13,7 +13,7 @@ class Witch {
 				$fibonaci_numbers[] = $fibonaci_numbers[count($fibonaci_numbers)-1] + $fibonaci_numbers[count($fibonaci_numbers)-2];
 				$total += $fibonaci_numbers[count($fibonaci_numbers)-1];
 			}
-			$a++;
+			$a ++;
 		}
 		return $total;
 	}
