@@ -2,10 +2,9 @@
 class Witch {
 
 	function killVillarge($sequence_of_year=0){
-		$fibonaci_numbers = Array();
-		$a = 0;	
+		$fibonaci_numbers = Array();		
 		$total_villagers = 0;		
-		while($a <= $sequence_of_year){
+		for ($a = 0;$a <= $sequence_of_year; $a++){
 			if($a < 2){
 				$fibonaci_numbers[] = $a;
 				$total_villagers += $a;
@@ -13,7 +12,6 @@ class Witch {
 				$fibonaci_numbers[] = end($fibonaci_numbers) + prev($fibonaci_numbers);
 				$total_villagers += end($fibonaci_numbers);
 			}
-			$a ++;
 		}
 		return $total_villagers;
 	}
