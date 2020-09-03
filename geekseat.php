@@ -6,7 +6,7 @@ class Witch {
 		$a = 0;	
 		$total = 0;		
 		while($a <= $sequence_of_year){
-			if($a <= 1){
+			if($a < 2){
 				$fibonaci_numbers[] = $a;
 				$total += $a;
 			}else{
