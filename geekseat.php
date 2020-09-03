@@ -48,7 +48,5 @@ echo $witch->averageNumberOfPeople(Array(
 			)
 ));
 
-
-
 ?>
 
